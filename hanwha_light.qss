@@ -1,0 +1,211 @@
+QWidget {
+    background-color: #ffffff;
+    color: #333333;
+    font-family: 'Segoe UI', '맑은 고딕', sans-serif;
+    font-size: 14px;
+}
+
+/* 🔶 버튼 기본 */
+QPushButton {
+    background-color: #FF6A00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #FE5000;
+}
+
+QPushButton:pressed {
+    background-color: #d94a00;
+}
+
+QPushButton:disabled {
+    background-color: #cccccc;
+    color: #888888;
+}
+
+/* 🧾 입력창 */
+QLineEdit {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 13px;
+    background-color: #fdfdfd;
+}
+
+QLineEdit:focus {
+    border: 2px solid #FE5000;
+}
+
+/* 📋 리스트 */
+QListWidget {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-size: 13px;
+}
+
+/* 📌 라벨 강조 */
+QLabel#label_name,
+QLabel#label_number,
+QLabel#label_balance {
+    font-weight: bold;
+    color: #444444;
+    padding-left: 4px;
+}
+
+/* 🔘 고객센터 버튼 (동그란 전용 스타일) */
+QPushButton#customerCenterButton {
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 25px;
+    background-color: #FE5000;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+QPushButton#customerCenterButton:hover {
+    background-color: #fe330a;
+}
+
+
+QMessageBox {
+    background-color: #ffffff;
+    color: #333333;
+    font-family: 'Segoe UI', '맑은 고딕', sans-serif;
+    font-size: 14px;
+}
+
+QMessageBox QLabel {
+    color: #333333;
+}
+
+QMessageBox QPushButton {
+    background-color: #FF6A00;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #FE5000;
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: #d94a00;
+}
+
+
+#customTitleBar {
+    background-color: #FF6A00;  /* or #2d2d2d for dark */
+    color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+#minimizeButton, #closeButton {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* minimizeButton과 closeButton에 대해 배경 투명하게 설정 */
+QPushButton#minimizeButton, QPushButton#closeButton {
+    background-color: transparent;  /* 배경을 투명하게 설정 */
+    color: white;  /* 글씨 색상 */
+    border: none;
+    border-radius: 8px;
+    padding: 0px;  /* 여백을 0으로 설정하여 아이콘만 보이도록 */
+}
+
+QPushButton#minimizeButton::icon, QPushButton#closeButton::icon {
+    width: 20px;  /* 아이콘 크기 설정 */
+    height: 20px;  /* 아이콘 크기 설정 */
+}
+
+/* hover 시 배경을 살짝 어두운 색으로 설정 */
+QPushButton#minimizeButton:hover, QPushButton#closeButton:hover {
+    background-color: rgba(0, 0, 0, 0.1);  /* hover 시 배경 색을 살짝 어둡게 */
+}
+
+QPushButton#minimizeButton:pressed, QPushButton#closeButton:pressed {
+    background-color: rgba(0, 0, 0, 0.2);  /* 클릭 시 배경을 더 어두운 투명색으로 */
+}
+
+
+QProgressBar {
+    border: 5px solid #FF6A00;  /* 원형 테두리 색상 */
+    border-radius: 50%;  /* 테두리를 원형으로 설정 */
+    background-color: transparent;  /* 배경을 투명하게 설정 */
+    text-align: center;
+    color: black;
+}
+
+QProgressBar::chunk {
+    background-color: #FF6A00;  /* 진행 바 색상 */
+    border-radius: 50%;  /* 진행 바도 원형 */
+}
+
+/* 스타일링을 적용할 라벨 */
+QLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+
+/* 이름, 계좌번호, 현재 자산을 위한 스타일 */
+QLabel#nameLabel, QLabel#numberLabel, QLabel#balanceLabel {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF6A00; /* 텍스트 색상은 주황색 */
+    margin-bottom: 15px;
+}
+
+QLabel#label_name, QLabel#titleLabel, QLabel#label_account, QLabel#label_password, QLabel#label_confirm{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#infoContainer {
+    border: 2px solid #FF6A00;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff8f2;
+}
+
+QWidget#infoContainer {
+    border: 2px solid #FF6A00;
+    border-radius: 10px;
+    background-color: #fff8f2;
+    padding: 12px; /* 내부 여백 */
+    margin: 0px;    /* 외부 여백 제거 */
+}
+
+
+QGroupBox#infoGroup {
+    border: 2px solid #FF6A00;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 6px;
+}
+QGroupBox::title {
+    color: #FF6A00;
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px;
+}

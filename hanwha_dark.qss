@@ -1,0 +1,176 @@
+QWidget {
+    background-color: #2d2d2d;
+    color: #eeeeee;
+    font-family: 'Segoe UI', '맑은 고딕', sans-serif;
+    font-size: 14px;
+}
+
+/* 버튼 */
+QPushButton {
+    background-color: #444444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #666666;
+}
+
+QPushButton:pressed {
+    background-color: #888888;
+}
+
+QPushButton:disabled {
+    background-color: #333333;
+    color: #999999;
+}
+
+/* 입력창 */
+QLineEdit {
+    background-color: #3c3c3c;
+    color: #ffffff;
+    border: 1px solid #666666;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 13px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #FF6A00;
+}
+
+/* 리스트 */
+QListWidget {
+    background-color: #2a2a2a;
+    border: 1px solid #444444;
+    padding: 5px;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+/* 라벨 강조 */
+QLabel#label_name,
+QLabel#label_number,
+QLabel#label_balance {
+    font-weight: bold;
+    color: #f0f0f0;
+    padding-left: 4px;
+}
+
+/* 고객센터 버튼 */
+QPushButton#customerCenterButton {
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 25px;
+    background-color: #FF6A00;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+QPushButton#customerCenterButton:hover {
+    background-color: #fe330a;
+}
+
+QMessageBox {
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', '맑은 고딕', sans-serif;
+    font-size: 14px;
+}
+
+QMessageBox QLabel {
+    color: #f0f0f0;
+}
+
+QMessageBox QPushButton {
+    background-color: #444444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #666666;
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: #888888;
+}
+
+
+#customTitleBar {
+    background-color: #FF6A00;  /* or #2d2d2d for dark */
+    color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+#minimizeButton, #closeButton {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#minimizeButton:hover, #closeButton:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#closeButton:hover {
+    background-color: red;
+}
+/* minimizeButton과 closeButton에 대해 배경 투명하게 설정 */
+QPushButton#minimizeButton, QPushButton#closeButton {
+    background-color: transparent;  /* 배경을 투명하게 설정 */
+    color: white;  /* 글씨 색상 */
+    border: none;
+    border-radius: 8px;
+    padding: 0px;  /* 여백을 0으로 설정하여 아이콘만 보이도록 */
+}
+
+QPushButton#minimizeButton::icon, QPushButton#closeButton::icon {
+    width: 20px;  /* 아이콘 크기 설정 */
+    height: 20px;  /* 아이콘 크기 설정 */
+}
+
+/* hover 시 배경을 살짝 어두운 색으로 설정 */
+QPushButton#minimizeButton:hover, QPushButton#closeButton:hover {
+    background-color: rgba(0, 0, 0, 0.1);  /* hover 시 배경 색을 살짝 어둡게 */
+}
+
+QPushButton#minimizeButton:pressed, QPushButton#closeButton:pressed {
+    background-color: rgba(0, 0, 0, 0.2);  /* 클릭 시 배경을 더 어두운 투명색으로 */
+}
+
+
+/* 스타일링을 적용할 라벨 */
+QLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 이름, 계좌번호, 현재 자산을 위한 스타일 */
+QLabel#nameLabel, QLabel#numberLabel, QLabel#balanceLabel, QLabel#titleLabel {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF6A00; /* 텍스트 색상은 주황색 */
+    margin-bottom: 15px;
+}
+
+QLabel#label_name, QLabel#titleLabel, QLabel#label_account, QLabel#label_password, QLabel#label_confirm{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}

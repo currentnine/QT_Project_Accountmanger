@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>532</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MyBankApp - 계좌 관리</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="logoLabel">
+      <property name="text">
+       <string>🔒 MyBankApp 로고</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="customerCenterButton">
+      <property name="font">
+       <font>
+        <family>Yu Gothic</family>
+        <pointsize>7</pointsize>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton#customerCenterButton {
+    /* 크기를 고정하거나 최소/최대 크기를 고정해서 동그랗게 유지 */
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    
+    /* 배경색, 테두리 등 조절 */
+    background-color: #fc9a6d
+
+;
+    border-radius: 25px;
+    border: none;
+}
+
+QPushButton#customerCenterButton:hover {
+    background-color: #fe330a;
+}
+         </string>
+      </property>
+      <property name="text">
+       <string>고객센터</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="loginPage">
+       <layout class="QGridLayout" name="loginLayout">
+        <item row="2" column="1">
+         <spacer name="horizontalSpacer2">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="registerButton">
+          <property name="text">
+           <string>회원가입</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="loginButton">
+          <property name="text">
+           <string>로그인</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="4">
+         <spacer name="topSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>50</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="1">
+         <spacer name="horizontalSpacer1">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="3" column="0" colspan="4">
+         <spacer name="bottomSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>100</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="accountLineEdit">
+          <property name="placeholderText">
+           <string>계좌번호 입력</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="passwordLineEdit">
+          <property name="echoMode">
+           <enum>QLineEdit::EchoMode::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>비밀번호 입력</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="mainPage">
+       <layout class="QVBoxLayout" name="mainPageLayout">
+        <item>
+         <widget class="QGroupBox" name="infoGroupBox">
+          <property name="styleSheet">
+           <string notr="true">
+QGroupBox#infoGroupBox {
+    border: 2px solid #FF6A00;
+    border-radius: 16px;
+    background-color: #FF6A00;
+    margin: 12px;
+    padding: 16px;
+    /* 입체감: 안쪽 그림자와 흰 배경 */
+    <!-- box-shadow: 20px 30px 12px rgba(0, 0, 0, 0.1); /* Qt CSS에는 box-shadow가 직접 지원 안됨, 대신 frame + border 효과로 유사 구현 */ -->
+    /* 입체감을 위한 약간의 좌측 상단 방향 강조 */
+    border-top: 4px solid #FFA040;
+    border-left: 4px solidrgb(85, 49, 13);
+    border-bottom: 1px solid #FF6A00;
+    border-right: 1px solid #FF6A00;
+}
+
+
+/* 내부 QLabel 공통 스타일 */
+QGroupBox#infoGroupBox QLabel {
+    background-color: #FF6A00;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 6px;
+    padding: 4px 8px;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 4px 8px;
+    font-weight: bold;
+    color: #FF6A00;
+}
+   </string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="infoRowLayout">
+           <item row="1" column="1">
+            <widget class="QLabel" name="numberLabel">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="balanceLabel">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="nameLabel">
+             <property name="font">
+              <font>
+               <pointsize>-1</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_balance">
+             <property name="text">
+              <string>현재 자산:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_number">
+             <property name="text">
+              <string>계좌번호:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_name">
+             <property name="text">
+              <string>이름:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="transactionLayout">
+          <item>
+           <widget class="QLineEdit" name="amountLineEdit">
+            <property name="placeholderText">
+             <string>금액 입력</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="depositButton">
+            <property name="text">
+             <string>입금</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="withdrawButton">
+            <property name="text">
+             <string>출금</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="transferButton">
+            <property name="text">
+             <string>송금</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="searchPageButton">
+          <property name="text">
+           <string>거래내역 검색</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="logoutButton">
+          <property name="text">
+           <string>로그아웃</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="changePasswordButton">
+          <property name="text">
+           <string>비밀번호 변경</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="searchPage">
+       <layout class="QVBoxLayout" name="searchPageLayout">
+        <item>
+         <layout class="QHBoxLayout" name="searchLayout">
+          <item>
+           <widget class="QLineEdit" name="searchLineEdit">
+            <property name="placeholderText">
+             <string>거래내역 검색</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="searchButton">
+            <property name="text">
+             <string>검색</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="favoriteButton">
+            <property name="text">
+             <string>즐겨찾기</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="logListWidget"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="backButton">
+          <property name="text">
+           <string>뒤로가기</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="bottomLayout"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
